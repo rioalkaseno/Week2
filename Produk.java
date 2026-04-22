@@ -24,6 +24,13 @@ public class Produk {
         return stok;
     }
 
+    public void setHarga(double harga){
+        this.harga = harga;
+    }
+    public void setStok(int stok){
+        this.stok = stok;
+    }
+
     public void tampilInfo(){
 //semua atribut bisa diakses di sini - kita masih didalam class Produk
         System.out.println("Produk  : " + nama);
