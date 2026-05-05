@@ -3,12 +3,14 @@ public class Eletronik extends Produk {
 
     private int garansi;
 
-    public Eletronik(String nama, double harga, int stok, String kategori, int garansi) {
+    public Eletronik(String nama, double harga, int stok, String kategori, int expired) {
         super(nama, harga, stok, kategori);
-        setGaransi(garansi);
+        this.garansi = garansi;
     }
 
-    public void tampilData() {
+    @Override
+    public void tampilInfo() {
+        System.out.println("elektronik");
         super.tampilInfo();
         System.out.println("Masa garansi : " + garansi + " hari");
     }
