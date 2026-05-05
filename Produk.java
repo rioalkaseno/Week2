@@ -1,4 +1,4 @@
-package base; // di dalam folder base
+//package base; // di dalam folder base
 
 
 public class Produk {
