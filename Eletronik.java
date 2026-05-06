@@ -33,6 +33,11 @@ public class Eletronik extends Produk {
         }
 
 
+    public double hitungDiskon(int jumlahBeli, double persenPajak){
+        return hitungTotalHarga(jumlahBeli)* (persenPajak / 100);
+        }
+
+
     public void setgaransiTahun(int garansiTahun) {
         if (garansiTahun < 0) {
             System.out.println("Masa garansiTahun tidak boleh negatif");
