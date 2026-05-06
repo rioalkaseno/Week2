@@ -7,7 +7,7 @@ abstract public class Produk {
     private double harga; //tidak bisa diakses subclass karena private
     private int stok; //tidak bisa diakses dari mana saja karena private
 
-    public Produk(String nama, double harga, int stok, String kategori){
+    public Produk(String nama, double harga, int stok){
         this.nama = nama;
         this.harga = harga;
         this.stok = stok;
@@ -58,8 +58,6 @@ abstract public class Produk {
         System.out.println("------------------");
     }
 
-    
-   
 
     public static void main(String[] args) {
         

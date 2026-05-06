@@ -4,8 +4,9 @@ public class Eletronik extends Produk {
     private int garansiTahun;
     private static final double PPN = 0.11;
 
-    public Eletronik(String nama, double harga, int stok, String kategori, int garansiTahun) {
-        super(nama, harga, stok, kategori);
+    public Eletronik(String nama ,String merek ,double harga, int stok, int garansiTahun) {
+        super(nama, harga, stok);
+        this.merek = merek;
         this.garansiTahun = garansiTahun;
     }
 
