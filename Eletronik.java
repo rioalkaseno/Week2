@@ -28,6 +28,11 @@ public class Eletronik extends Produk {
         System.out.println("------------------");
     }
 
+    public double hitungDiskon(int jumlahBeli){
+        return hitungTotalHarga(jumlahBeli)* PPN;
+        }
+
+
     public void setgaransiTahun(int garansiTahun) {
         if (garansiTahun < 0) {
             System.out.println("Masa garansiTahun tidak boleh negatif");
