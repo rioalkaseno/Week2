@@ -8,11 +8,14 @@ public class Makanan extends Produk {
         this.kedaluwarsa=kedaluwarsa;
         this.kategori=kategori;
     }
-
+    
     public String getKedaluwarsa(){
         return kedaluwarsa;
     }
-
+    public String getKategori(){
+        return kategori;
+    }
+    
 
     @Override
     //abstract & override 
