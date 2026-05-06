@@ -20,7 +20,10 @@ public class Makanan extends Produk {
     @Override
     //abstract & override 
     public void tampilInfo() {
-
+        System.out.println("|MAKANAN|");
+        System.out.println("kategori    : " + kategori);
+        System.out.println("kedaluwarsa   : "+ kedaluwarsa+ "hari");
+        System.out.println("------------------");
     }
 
  
