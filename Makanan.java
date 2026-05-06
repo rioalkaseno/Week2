@@ -31,6 +31,10 @@ public class Makanan extends Produk {
             return hitungTotalHarga(jumlahBeli)*0.05;
         return 0;
     }
+
+    public double hitungHargaSetelahDiskon(int jumlahBeli){
+        return hitungTotalHarga(jumlahBeli) - hitungDiskon(jumlahBeli);
+    }
  
 }
     
