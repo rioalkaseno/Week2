@@ -1,11 +1,11 @@
 //package base; // di dalam folder base
 
 
-public class Produk {
+abstract public class Produk {
     private String nama; //hanya bisa diakses di dalam class Produk
-    String kategori; // hanya bisa diakses dalam package toko
-    private double harga; //bisa diakses subclass meskipun beda package
-    private int stok; //bisa diakses dari mana saja
+    String kategori; // hanya bisa diakses dalam package yang sama (default/package-private)
+    private double harga; //tidak bisa diakses subclass karena private
+    private int stok; //tidak bisa diakses dari mana saja karena private
 
     public Produk(String nama, double harga, int stok, String kategori){
         this.nama = nama;
@@ -24,6 +24,7 @@ public class Produk {
         return stok;
     }
 
+
     public void setHarga(double harga){
         this.harga = harga;
     }
@@ -31,14 +32,34 @@ public class Produk {
         this.stok = stok;
     }
 
-    public void tampilInfo(){
-//semua atribut bisa diakses di sini - kita masih didalam class Produk
+    public double hitungTotalHarga(int JumlahBeli){
+        return harga*JumlahBeli;
+    }
+        
+    public void beli(int JumlahBeli){
+        if (JumlahBeli <=0) {
+            System.out.println("Jumlah beli harus lebih dari 0");
+            return;
+        }
+        if (JumlahBeli > stok) {
+            System.out.println("Stok "+ nama+ "Tidak cukup! Tersisa " + stok);
+            return;
+        }
+        stok -= JumlahBeli;
+        System.out.println("Beli "+nama+" x "+ JumlahBeli + " = Rp." + hitungTotalHarga(JumlahBeli) + " | Sisa stok: "+stok);
+    }
+
+
+    public void tampilInfo() {
         System.out.println("Produk  : " + nama);
         System.out.println("Kategori: " + kategori);
         System.out.println("Harga   : Rp." + harga);
         System.out.println("Stok    : " + stok);
         System.out.println("------------------");
     }
+
+    
+    public abstract double hitungPajak(double harga);
 
     public static void main(String[] args) {
         
