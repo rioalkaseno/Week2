@@ -21,9 +21,11 @@ public class Eletronik extends Produk {
 
     @Override
     public void tampilInfo() {
-        System.out.println("elektronik");
-        super.tampilInfo();
+        System.out.println("|ELEKTRONIK|");
+        System.out.println("nama    : "+getNama());
+        System.out.println("merek   : "+garansiTahun+ "Tahun");
         System.out.println("Masa garansiTahun : " + garansiTahun + " hari");
+        System.out.println("------------------");
     }
 
     public void setgaransiTahun(int garansiTahun) {
