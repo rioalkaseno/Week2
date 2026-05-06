@@ -59,6 +59,9 @@ abstract public class Produk {
     }
 
 
+    public abstract double hitungPajak(double harga);
+
+
     public static void main(String[] args) {
         
     }
