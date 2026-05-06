@@ -10,6 +10,14 @@ public class Eletronik extends Produk {
         this.garansiTahun = garansiTahun;
     }
 
+    public String getMerek(){
+        return merek;
+    }
+
+    public int getGaransiTahun(){
+        return garansiTahun;
+    }
+
     @Override
     public void tampilInfo() {
         System.out.println("elektronik");
