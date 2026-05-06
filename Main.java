@@ -16,7 +16,7 @@ public class Main {
         roti.tampilInfo();  
 
 //Overloading hitung pajak Class Elektronik
-        System.out.println("====RINCIAN PAJAK ELEKTRONIK====");
+        System.out.println("==== RINCIAN PAJAK ELEKTRONIK ====");
 
 //Versi 1 Pajak Standar
         double pajakLaptop = laptop.hitungPajak(1);
@@ -32,5 +32,25 @@ public class Main {
         System.out.println("    Subtotal : " + hp.hitungTotalHarga(2));
         System.out.println("    Pajak    : " + pajakHpCustom);
         System.out.println("    Total    : " + (hp.hitungTotalHarga(2)) + (pajakHpCustom));
+
+//Overloading hitung Diskon
+       System.out.println("==== RINCIAN DISKON MAKANAN ====");
+
+//Versi 1 Diskon otomatis beli >=10
+        System.out.println("Indomie x10 (Diskon Otomatis)");
+        System.out.println("    Subtotal : " + indomie.hitungTotalHarga(10));
+        System.out.println("    Diskon    : " + indomie.hitungDiskon(10));
+        System.out.println("    Total    : " + indomie.hitungHargaSetelahDiskon(10));
+
+//Versi 2 Diskon Custom 15% (Misal promo spesial)
+        System.out.println("Indomie x10 (Diskon Otomatis)");
+        System.out.println("    Subtotal : " + roti.hitungTotalHarga(5));
+        System.out.println("    Diskon   : " + roti.hitungDiskon(5, 15));
+        System.out.println("    Total    : " + (roti.hitungTotalHarga(5) - roti.hitungDiskon(5, 15)));
+
+
     }
+
+
+        
 }
