@@ -15,5 +15,22 @@ public class Main {
         indomie.tampilInfo();
         roti.tampilInfo();  
 
+//Overloading hitung pajak Class Elektronik
+        System.out.println("====RINCIAN PAJAK ELEKTRONIK====");
+
+//Versi 1 Pajak Standar
+        double pajakLaptop = laptop.hitungPajak(1);
+        double totalLaptop = laptop.hitungHargaSetelahPajak(1);
+        System.out.println("Laptop 1x (PPN Standar 11%)");
+        System.out.println("    Subtotal : " + laptop.hitungTotalHarga(2));
+        System.out.println("    Pajak    : " + pajakLaptop);
+        System.out.println("    Total    : " + totalLaptop);
+
+//Versi 2 Pajak Custom 5% (Misal barang impor khusus)
+        double pajakHpCustom = laptop.hitungPajak(1);
+        System.out.println("Laptop 2x (Pajak Custom 5%)");
+        System.out.println("    Subtotal : " + hp.hitungTotalHarga(2));
+        System.out.println("    Pajak    : " + pajakHpCustom);
+        System.out.println("    Total    : " + (hp.hitungTotalHarga(2)) + (pajakHpCustom));
     }
 }
