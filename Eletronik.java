@@ -14,6 +14,7 @@ public class Eletronik extends Produk {
         return merek;
     }
 
+    
     public int getGaransiTahun(){
         return garansiTahun;
     }
