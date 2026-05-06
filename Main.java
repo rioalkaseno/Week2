@@ -47,8 +47,14 @@ public class Main {
         System.out.println("    Subtotal : " + roti.hitungTotalHarga(5));
         System.out.println("    Diskon   : " + roti.hitungDiskon(5, 15));
         System.out.println("    Total    : " + (roti.hitungTotalHarga(5) - roti.hitungDiskon(5, 15)));
+ 
 
-
+//---Transaksi---
+System.out.println("/n===== TRANSAKSI =====");
+laptop.beli(1);
+hp.beli(1);
+indomie.beli(10);
+roti.beli(5);
     }
 
 
