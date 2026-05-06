@@ -35,7 +35,7 @@ abstract public class Produk {
     public double hitungTotalHarga(int JumlahBeli){
         return harga*JumlahBeli;
     }
-        
+
     public void beli(int JumlahBeli){
         if (JumlahBeli <=0) {
             System.out.println("Jumlah beli harus lebih dari 0");
@@ -59,7 +59,7 @@ abstract public class Produk {
     }
 
     
-    public abstract double hitungPajak(double harga);
+   
 
     public static void main(String[] args) {
         
