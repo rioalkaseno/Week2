@@ -26,6 +26,11 @@ public class Makanan extends Produk {
         System.out.println("------------------");
     }
 
+    public double hitungDiskon(int jumlahBeli){
+        if (jumlahBeli >= 10 )
+            return hitungTotalHarga(jumlahBeli)*0.05;
+        return 0;
+    }
  
 }
     
